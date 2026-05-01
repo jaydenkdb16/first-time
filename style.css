@@ -44,9 +44,10 @@ body {
     color: var(--text);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
+    padding: 2rem 0;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -203,7 +204,32 @@ textarea {
     background-color: var(--primary-hover);
 }
 
+.comments-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--field-border);
+    text-align: left;
+}
+
+#disqus_thread {
+    min-height: 240px;
+}
+
+.comments-section noscript {
+    color: var(--muted-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.comments-section a {
+    color: var(--primary);
+}
+
 @media (max-width: 420px) {
+    body {
+        padding: 1rem 0;
+    }
+
     #app {
         padding: 1.5rem;
     }
