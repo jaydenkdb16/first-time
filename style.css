@@ -15,6 +15,8 @@
     --primary-hover: #095bb8;
     --toggle-bg: #e8edf5;
     --toggle-text: #172033;
+    --field-bg: #ffffff;
+    --field-border: #cbd5e1;
     --focus-ring: rgba(11, 114, 231, 0.35);
 }
 
@@ -31,6 +33,8 @@ body.dark-mode {
     --primary-hover: #3b82f6;
     --toggle-bg: #374151;
     --toggle-text: #f9fafb;
+    --field-bg: #111827;
+    --field-border: #4b5563;
     --focus-ring: rgba(96, 165, 250, 0.4);
 }
 
@@ -70,6 +74,10 @@ h1 {
     line-height: 1.2;
 }
 
+.generator-section {
+    margin-top: 1.5rem;
+}
+
 #lotto-numbers {
     display: flex;
     justify-content: center;
@@ -104,6 +112,29 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
+input,
+textarea {
+    width: 100%;
+    border: 1px solid var(--field-border);
+    border-radius: 5px;
+    background-color: var(--field-bg);
+    color: var(--text);
+    font: inherit;
+    padding: 10px 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
 #theme-toggle {
     flex: 0 0 auto;
     min-width: 96px;
@@ -130,6 +161,45 @@ button:focus-visible {
 }
 
 #generate-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.partnership-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--field-border);
+    text-align: left;
+}
+
+.partnership-section h2 {
+    margin: 0 0 1rem;
+    color: var(--text);
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.partnership-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.partnership-form label {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#partnership-submit {
+    margin-top: 0.5rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 11px 18px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+#partnership-submit:hover {
     background-color: var(--primary-hover);
 }
 

@@ -12,8 +12,35 @@
             <h1>Lotto Number Generator</h1>
             <button id="theme-toggle" type="button" aria-label="Switch to dark mode">Dark Mode</button>
         </div>
-        <div id="lotto-numbers"></div>
-        <button id="generate-btn">Generate Numbers</button>
+        <section class="generator-section" aria-label="Lotto number generator">
+            <div id="lotto-numbers"></div>
+            <button id="generate-btn">Generate Numbers</button>
+        </section>
+
+        <section class="partnership-section" aria-labelledby="partnership-title">
+            <h2 id="partnership-title">Partnership Inquiry</h2>
+            <form
+                class="partnership-form"
+                action="https://formspree.io/f/xbdwlrod"
+                method="POST"
+            >
+                <input type="hidden" name="_subject" value="New partnership inquiry">
+
+                <label for="partner-name">Name</label>
+                <input id="partner-name" name="name" type="text" autocomplete="name" required>
+
+                <label for="partner-email">Email</label>
+                <input id="partner-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="partner-company">Company</label>
+                <input id="partner-company" name="company" type="text" autocomplete="organization">
+
+                <label for="partner-message">Message</label>
+                <textarea id="partner-message" name="message" rows="4" required></textarea>
+
+                <button id="partnership-submit" type="submit">Send Inquiry</button>
+            </form>
+        </section>
     </div>
     <script src="main.js"></script>
 </body>
